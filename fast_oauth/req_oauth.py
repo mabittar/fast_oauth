@@ -18,7 +18,7 @@ def main():
     # Users app Authorization and redirected
     authorization_response = input("Entre com a url de autorizacao: ")
     oauth_token = oauth2_session.fetch_token(
-        token_url, authorization_response=authorization_response
+        token_url, authorization_response=authorization_response, state=state
     )
     assert oauth_token is not None
 
